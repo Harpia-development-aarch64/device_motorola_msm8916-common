@@ -27,6 +27,7 @@
 
 import /vendor/etc/init/hw/init.mmi.usb.rc
 import /vendor/etc/init/hw/init.target.rc
+import init.qcom.power.rc
 
 on early-init
     chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
