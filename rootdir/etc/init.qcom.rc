@@ -321,6 +321,7 @@ on post-fs-data
     # Create directory for TZ Apps
     mkdir /data/misc/qsee 0770 system system
 
+    mkdir /data/fdAlbum 0770 camera camera
     mkdir /data/misc/camera 0770 camera camera
 
     mkdir /data/misc/ipa 0700 net_admin net_admin
@@ -595,6 +596,11 @@ service qmuxd /system/bin/qmuxd
     user root
     group radio audio bluetooth gps nfc oem_2950
     seclabel u:r:qmuxd:s0
+
+service msm_irqbalance /system/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
+    class core
+    user root
+    group root
 
 service netmgrd /system/bin/netmgrd
     class main
