@@ -54,7 +54,7 @@ s32 wifi_qsap_set_tx_power(s32 tx_power)
         return eERR_SET_TX_POWER;
     }
 
-    strlcpy(wrq.ifr_name, iface, sizeof(wrq.ifr_name));
+    sprintf(wrq.ifr_name, iface, sizeof(wrq.ifr_name));
     wrq.u.data.length = sizeof(s32);
     wrq.u.data.pointer = &tx_power;
     wrq.u.data.flags = 0;
