@@ -44,6 +44,8 @@ TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
+TARGET_PREFER_32_BIT := true
+
 # Kernel Toolchain
 KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/$(HOST_OUT)/aarch64/aarch64-linux-android-4.9/bin/
 KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
