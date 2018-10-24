@@ -20,8 +20,8 @@ TARGET_RECOVERY_DEVICE_DIRS := \
     $(VENDOR_PATH) \
     $(DEVICE_PATH)
 
-TARGET_ARCH := arm
-TARGET_CPU_ABI  := armeabi-v7a
+TARGET_ARCH := arm64
+TARGET_CPU_ABI  := arm64-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -36,11 +36,17 @@ TARGET_BOARD_PLATFORM := msm8916
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 TARGET_NO_BOOTLOADER := true
 
+# Kernel Toolchain
+KERNEL_TOOLCHAIN := $(shell pwd)/prebuilts/gcc/$(HOST_OUT)/aarch64/aarch64-linux-android-4.9/bin/
+KERNEL_TOOLCHAIN_PREFIX := aarch64-linux-android-
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
+
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom ehci-hcd.park=3 vmalloc=400M androidboot.bootdevice=7824900.sdhci movablecore=160M androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000
+TARGET_KERNEL_ARCH := arm64
 BOARD_CUSTOM_BOOTIMG_MK := $(VENDOR_PATH)/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8916
 
