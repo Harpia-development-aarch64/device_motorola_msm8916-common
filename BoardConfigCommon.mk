@@ -36,9 +36,6 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-
 TARGET_BOARD_PLATFORM := msm8916
 
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
