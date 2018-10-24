@@ -73,6 +73,7 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
+TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/cryptfs_hw
 TW_INCLUDE_CRYPTO := true
 
 # TWRP
